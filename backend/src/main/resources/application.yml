@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://k9d108.p.ssafy.io:3306/fire?useSSL=false&useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul&allowMultiQueries=true
+    username: ssafy
+    password: pass1234!
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      dialect: org.hibernate.dialect.MySQL8InnoDBDialect
+  auth:
+    secretKey: 6v9y$B&E)H@MbQeThWmZq4t7w!z%C*F-
+  redis:
+    host: k9d108.p.ssafy.io
+    port: 6379
+
+logging:
+  level:
+    com.fire: debug
+    org.hibernate.SQL: debug
+
+jwt:
+  secret-key: CC9FB15207D3E3B165A907F82DAD58D0539F5498ED747C9E70EC9C9FC9AC888C
+  refresh_time: 72
+oauth:
+  naver:
+    secret: tAzsgV3Ua_
+    client-id: JFJxzptVWrUX0fI6HWAr
+    url:
+      auth: https://nid.naver.com
+      api: https://openapi.naver.com
+server:
+  servlet:
+    context-path: /api
+  port: 50000
