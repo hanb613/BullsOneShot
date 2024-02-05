@@ -1,8 +1,6 @@
 <div align="center">
 </div>
 
-<br>  
-
 ## 📰 프로젝트 소개
 
 IoT와 유니티로 체험하는 소방 훈련 시뮬레이션 웹 <Br> <br>
